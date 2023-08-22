@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1 id="title">Com seria la millor pàgina web del món?</h1>
+    
+    <p id="description">Si estàs llegint aquesta enquesta vol dir que t'has llençat a la piscina de l'emprenedoria. 
+        (O bé, que t'ho estàs acabant de rumiar). </p> 
+    <p><b>Enhorabona i molta sort en aquest camí!</b></p> 
+    <p>Per últim, moltes gràcies per dedicar uns minuts del teu temps per ajudar-me 
+        en els meus primers passos cap a la revolució emprenedora.</p>
+   
+    <form id="survey-form">
+      <fieldset>
+        <!-- Informació demogràfica -->
+        <label for="age">Edat (anys): 
+            <input class="inline" name="age" id="age" type="number" min="13" max="120" required></input>
+        </label>
+        <label for="gender"> Gènere:
+            <input class="inline" id="gender" type="radio" name="gender" > Home</input>
+            <input class="inline" id="gender" type="radio" name="gender" > Dona</input>
+            <input class="inline" id="gender" type="radio" name="gender" > Altre</input>
+        </label>
+        <label for="hometown">Lloc de residència: 
+            <input name="hometown" id="hometown" type="text"></input>
+        </label>
+      </fieldset>
+      <fieldset>
+        <!-- Coneixements sobre pàgines web -->
+        <label for="experience">Has tingut alguna experiència prèvia en la creació de pàgines web?
+            <input class="inline" id="experience" type="radio" name="experience"> Sí</input>
+            <input class="inline" id="experience" type="radio" name="experience"> No</input>
+        </label>
+        <label for="level">Quin és el teu nivell de coneixement tècnic? 
+            <select name="level" id="level">
+                <option value="">(selecciona el teu nivell)</option>
+                <option value="1">Principiant</option>
+                <option value="2">Intermedi</option>
+                <option value="3">Avançat</option>
+            </select>
+        </label>
+      </fieldset>
+      <fieldset>
+        <!-- Importància d'una pàgina web -->
+        <label for="importance">Què tan important consideres tenir una pàgina web per al teu negoci?
+            <input name="importance" id="importance" type="range" min="1" max="5" step="1" value="3"></input>
+        </label>
+        <label for="benefits">Quins beneficis creus que una pàgina web podria aportar al teu negoci? 
+            <textarea name="benefits" id="benefits" rows="3" cols="30"></textarea></label>
+      </fieldset>
+      <fieldset>
+        <!-- Presència en línia -->
+        <label for="bool-presence">Ja tens alguna mena de presència en línia per al teu negoci?
+            <input class="inline" id="bool-presence" type="radio" name="presence"> Sí</input>
+            <input class="inline" id="bool-presence" type="radio" name="presence"> No</input>
+
+        <label for="presence">Si has respost "Sí", quines plataformes utilitzes? (selecciona totes les que s'apliquin)
+            <input class="inline" id="presence" type="checkbox" name="presence" value="1"> Pàgina web</input>
+            <input class="inline" id="presence" type="checkbox" name="presence" value="2"> Facebook</input>
+            <input class="inline" id="presence" type="checkbox" name="presence" value="3"> Instagram</input>
+            <input class="inline" id="presence" type="checkbox" name="presence" value="4"> Twitter</input>
+            <input class="inline" id="presence" type="checkbox" name="presence" value="5"> TikTok</input>
+            <input class="inline" id="presence" type="checkbox" name="presence" value="6"> Youtube</input>
+            <input class="inline" id="presence" type="checkbox" name="presence" value="7"> Altres (si us plau, especifica):
+                <textarea name="presence" id="presence" type="text"></textarea>
+            </input>
+        </label>
+      </fieldset>
+      <fieldset>
+        <!-- Característiques desitjades -->
+        <label for="functionalities"> Quines funcionalitats t'agradaria tenir a la teva pàgina web?
+            <input class="inline" id="functionalities" type="checkbox" name="functionalities" value="1"> Informació de contacte</input>
+            <input class="inline" id="functionalities" type="checkbox" name="functionalities" value="2"> Catàleg de productes/serveis </input>
+            <input class="inline" id="functionalities" type="checkbox" name="functionalities" value="3"> Carretó de compra en línia</input>
+            <input class="inline" id="functionalities" type="checkbox" name="functionalities" value="4"> Reserves en línia</input>
+            <input class="inline" id="functionalities" type="checkbox" name="functionalities" value="5"> Galeria de fotos</input>
+            <input class="inline" id="functionalities" type="checkbox" name="functionalities" value="6"> Blog o secció de notícies</input>
+            <input class="inline" id="functionalities" type="checkbox" name="functionalities" value="7"> Àrea de membres</input>
+            <input class="inline" id="functionalities" type="checkbox" name="functionalities" value="8"> Altres (si us plau, especifica):
+                <textarea name="funcionalities" id="functionalities" type="text" rows="3" cols="30" ></textarea>
+            </input>
+        </label>
+      </fieldset>
+      <fieldset>
+        <!-- Pressupost -->
+        <label for="bool-budget">Estaries disposat/da a invertir en una pàgina web professional per al teu negoci?
+            <input class="inline" id="bool-budget" type="radio" name="budget"> Sí</input>
+            <input class="inline" id="bool-budget" type="radio" name="budget"> No</input>
+        </label>
+        <label for="budget">Si la resposta és "Sí", quin rang de preu seria el més adequat per a tu? 
+            <select name="budget" id="budget">
+                <option value="">(selecciona el rang de preu)</option>
+                <option value="1">0-500€</option>
+                <option value="2">500-1000€</option>
+                <option value="3">1000-2000€</option>
+                <option value="4">2000-5000€</option>
+                <option value="5">5000-10000€</option>
+            </select>
+        </label>
+      </fieldset>
+      <fieldset>
+        <!-- Observacions finals -->
+        <label for="comments">Què més voldries afegir o comentar sobre la creació d'una pàgina web per al teu negoci? 
+            <textarea name="comments" id="comments" rows="3" cols="30"></textarea>
+        </label>
+      </fieldset>
+      <input type="submit" value="Submit"></input>
+    </form>
+  </body>
+</html>
